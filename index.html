@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <link rel="stylesheet" href="login.css">
+
 </head>
 <body>
         <main>
             <form>
-                <div class = "title"> 
-                    <h1>Login</h1>
-                </div>
-                <div>
-                    <input id = 'cpf' type ="textautocomplete="off" maxlength="14">
-                    <script src ="/cpf.js"></script>
-                </div>  
+                <div class="main-login">
+                  <h1>Login</h1>
+                    <div class="input">
+                        <label for="cpf">Cpf</label>
+                        <input id = "cpf" type ="textautocomplete="off" maxlength="14" placeholder="Cpf">
+                        <img src="starburst-four-point.png">
+                            <script>
+                                $('#cpf').mask('000.000.000-00', {reverse: false})
+                            </script>
+                    </div>
+                    <div class="input">
+                        <label for ="senha">Senha</label> 
+                        <input placeholder="" type="password">
+                        <img src="starburst-four-point.png">
+                        
+                     </div>
+                     <button class="Login">Login</button>
+                </div>       
             </form>
         </main>  
 </body>

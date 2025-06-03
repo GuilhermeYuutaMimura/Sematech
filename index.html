@@ -10,31 +10,32 @@
 
 </head>
 <body>
-        <main>
-            <div class="title">
-                <h2> Bem-vinda ao AlertaFem</h2>
-            </div>
-            <form>
-                <div class="main-login">
-                <div class="card">     
-                  <h1>Login</h1>
-                      <div class="caixa">
-                        <label for="cpf">Cpf</label>
-                        <input id = "cpf" type ="textautocomplete="off" maxlength="14" placeholder="Cpf">
-                        <!--<img src="starburst-four-point.png">-->
-                            <script>
-                                $('#cpf').mask('000.000.000-00', {reverse: false})
-                            </script>
-                      </div>      
-                    <div class="caixa">
-                        <label for ="senha">Senha</label> 
-                        <input placeholder="" type="password">
-                        <!-- <img src="starburst-four-point.png"> -->
+    <div class="card">
+            <div class="form">
+                <h2>Bem Vinda ao AlertaFem</h2>
+                <h3>Entre com seus dados cadastrados</h3>
+                <!--<img src="logo.png" width=200> -->
+             <form>
+                 <div class="inputs">
+                        <label class="input-cpf">CPF</label>
+                        <input id="cpf"type="text" placeholder="CPF">
+                    <div class="inputs">
+                        <label class="input-pass">Senha</label>
+                        <input type="password" placeholder="Senha"required>
+                    </div>    
                 </div>
-                <button class="Login">Login</button>     
+
+                <div class="rodape1">
+                <a href="#" class="es">Esqueci a Senha</a>
+                <a href="#">Suporte</a>
                 </div>
-                </div>       
+                <button type="submit" class="btt">Login</button>
+                <div class="rodape2">
+                <p>Não possui conta?<a href="#"> Cadastre-se</a></p>
+                </div>
             </form>
-        </main>  
+        </div>
+    </div>
+    <script>$('#cpf').mask('000.000.000-00', {reverse: false}); </script>
 </body>
 </html>

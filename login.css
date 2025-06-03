@@ -1,63 +1,76 @@
-body{
+@font-face {
+    font-family:TimesTenBold;
+    src: url('Fonts/TimesTenBold.ttf');
+}
+@font-face {
+    font-family:TimesTen ;
+    src: url('Fonts/TimesTen.ttf');
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #d9d6ee;
-    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'TimesTen'; 
 }
-.main-login{
-    width: 100vw;
-    height: 100vh;
+
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-
-
-}
-.main-login > h1{
-    margin: 0;
-    color: #172044;
+    min-height: 100vh;
+    background-color: grey;
 }
 .card{
-    background-color:#aebcf1;
-    width: 40%;
-    height: 60%;
+    position: relative;
     display: flex;
+    width: 400px;
+    height: 600px;
+    background-color:#e0d4ec;
+    border: 2px solid black;
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #8f9cc7;
+}
 
-}
-.card > h1{
-    color: #162045;
-    font-weight: 800;
-    margin: 0;
-}
-.title{
-    position: absolute;
+.card .form{
     width: 100%;
+    padding: 65px;
     text-align: center;
-    margin-top: 90px;
-    color: #162045;
 }
-.caixa{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-.caixa > input{
+
+.inputs{
+    position: relative;
     width: 100%;
-    height: 35px;
-    border: 1px solid;
-    border-radius: 6px;
-    padding: 5px 10px;
-    color: #8f9cc7;
-} 
-img{
-    height:25px;
-    color: red
+    height: 50px;
+    border-bottom:2px solid black ;
+    margin: 15px 0;  
+}
+
+.inputs label{
+    position: absolute;
+    top: -10px ; 
+    font-size: 1em;
+    color: #232244;
+    font-weight: 500;  
+}
+
+.inputs input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+.rodape1{
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    color: #232244;
+    font-weight: 500;
+    margin: 70px 0 15px;
+}
+.rodape1 a{
+    color:#232244;
 }

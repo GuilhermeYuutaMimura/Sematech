@@ -70,7 +70,22 @@ body{
     color: #232244;
     font-weight: 500;
     margin: 70px 0 15px;
+    text-decoration: none;
 }
 .rodape1 a{
     color:#232244;
+}
+.rodape1 a:hover{
+    text-decoration: underline;
+}
+
+.btt{
+   width: 100%;
+   height: 45px;
+   background: #5a5384;
+   outline: none;
+   border: none;
+   border-radius: 20px;
+   font-size: 1em;
+   color: white;
 }

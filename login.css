@@ -19,12 +19,13 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: grey;
+    background-color: black;
 }
+
 .card{
     position: relative;
     display: flex;
-    width: 400px;
+    width: 420px;
     height: 600px;
     background-color:#e0d4ec;
     border: 2px solid black;
@@ -33,10 +34,21 @@ body{
     align-items: center;
 }
 
+
 .card .form{
     width: 100%;
     padding: 65px;
     text-align: center;
+}
+.card .form h2{
+    position: relative;
+    top: -85px;
+    color: #162045;
+}
+.card .form h3{
+    position: relative;
+    top: -75px;
+    color: rgba(90,85,147,0.5)
 }
 
 .inputs{
@@ -66,7 +78,6 @@ body{
 .rodape1{
     display: flex;
     justify-content: space-between;
-    font-size: .9em;
     color: #232244;
     font-weight: 500;
     margin: 70px 0 15px;
@@ -74,9 +85,14 @@ body{
 }
 .rodape1 a{
     color:#232244;
+    text-decoration: none;
 }
 .rodape1 a:hover{
     text-decoration: underline;
+}
+
+.es1{
+    margin-right: px;
 }
 
 .btt{
@@ -88,4 +104,23 @@ body{
    border-radius: 20px;
    font-size: 1em;
    color: white;
+}
+.rodape2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 px  
+}
+
+.rodape2 a{
+    color: #232244;
+    text-decoration: none;
+}
+
+.rodape2 a:hover{
+    text-decoration: underline;
+}
+.rodape2 p{
+    margin-left: 40px;
+    margin-top: 15px;
 }

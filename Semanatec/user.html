@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/user.css">
+    <title>User</title>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="clock" id="clock">09:30 pm</div>
+        </div>
+          <div>
+            <button class="funcoes"><img src="IMG/alarme.png" alt=""></button>
+            <button class="funcoes"><img src="IMG/policia.png" alt=""></button>
+            <button class="funcoes"><img src="IMG/local.png" alt=""></button>
+        </div>
+        <div>
+           <a href="ficha_medica.html" class="funcoes1">Ficha Médica <img src="IMG/cruz.png" alt=""></a>
+             </div>
+      
+        
+        <div class="recorder">
+            <button class="record-btn" id="recordBtn">🎙️</button>
+            <div class="recording" id="recordingStatus">
+                <div class="pulse"></div>
+                Gravando...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'pm' : 'am';
+            
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            
+            document.getElementById('clock').textContent = `${hours}:${minutes} ${ampm}`;
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+        
+        const recordBtn = document.getElementById('recordBtn');
+        const recordingStatus = document.getElementById('recordingStatus');
+        let isRecording = false;
+        
+        recordBtn.addEventListener('click', () => {
+            isRecording = !isRecording;
+            
+            if (isRecording) {
+                recordBtn.style.backgroundColor = '#4cd964';
+                recordingStatus.style.display = 'flex';
+                
+            } else {
+                recordBtn.style.backgroundColor = '#ff5e57';
+                recordingStatus.style.display = 'none';
+              
+            }
+        });
+        
+    </script>
+</body>
+</html>

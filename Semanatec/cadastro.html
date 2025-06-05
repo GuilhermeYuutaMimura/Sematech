@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - AlertaFem</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <link rel="stylesheet" href="./CSS/cadastro.css">
+</head>
+<body id="cadastro">
+    <div class="card">
+        <div class="form-container">
+            <form class="login-form">
+                <div class="input-field">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" type="text" placeholder="Seu CPF">
+                    <div><img src="./IMG/divisoria_br.png" width="320px" alt=""></div>
+                    
+                </div>
+                
+                <div class="input-field">
+                    <label for="fullname">Nome Completo</label>
+                    <input id="fullname" type="text" placeholder="Seu Nome">
+                    <div><img src="./IMG/divisoria_br.png" width="320px" alt=""></div>
+                    
+                </div>
+                
+                <div class="input-field">
+                    <label for="password">Senha</label>
+                    <input id="password" type="password" placeholder="Sua Senha">
+                    <div><img src="./IMG/divisoria_br.png" width="320px" alt=""></div>
+                    
+                </div>
+                
+                <div class="input-field">
+                    <label for="confirm-password">Confirmar Senha</label>
+                    <input id="confirm-password" type="password" placeholder="Confirme sua Senha">
+                    <div><img src="./IMG/divisoria_br.png" width="320px" alt=""></div>
+                    
+                </div>
+                
+                <div class="input-field">
+                    <label for="phone">Telefone</label>
+                    <input id="phone" type="text" placeholder="Seu Telefone">
+                    <div><img src="./IMG/divisoria_br.png" width="320px" alt=""></div>
+                    
+                </div>
+                
+                <button type="submit" class="register-button">Cadastrar</button>
+                
+                <div class="login-row">
+                    <span>Já possui conta?</span>
+                    <a href="login.html" class="login-link">Faça login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+  <script>
+   
+    $('#cpf').mask('000.000.000-00', {reverse: false});
+    $('#phone').mask('(00) 00000-0000');
+
+  
+    $('.login-form').on('submit', function(e) {
+        e.preventDefault(); 
+
+        const cpf = $('#cpf').val();
+        const nome = $('#fullname').val();
+        const senha = $('#password').val();
+        const confirmarSenha = $('#confirm-password').val();
+        const telefone = $('#phone').val();
+
+        if (!cpf || !nome || !senha || !confirmarSenha || !telefone) {
+            alert('Preencha todos os campos.');
+            return;
+        }
+
+        if (senha !== confirmarSenha) {
+            alert('As senhas não coincidem.');
+            return;
+        }
+
+        const usuario = {
+            cpf: cpf,
+            nome: nome,
+            senha: senha,
+            telefone: telefone
+        };
+
+        localStorage.setItem('usuario', JSON.stringify(usuario));
+
+        alert('Cadastro realizado com sucesso!');
+        window.location.href = 'login.html';
+    });
+</script>
+
+</body>
+</html>

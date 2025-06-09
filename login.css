@@ -1,20 +1,20 @@
 @font-face {
     font-family:TimesTenBold;
-    src: url('Fonts/TimesTenBold.ttf');
+    src: url('Fonts/TimesTenBold.ttf'); /* Fontes importadas utilizadas*/
 }
 @font-face {
     font-family:TimesTen ;
-    src: url('Fonts/TimesTen.ttf');
+    src: url('Fonts/TimesTen.ttf');     /* Fontes importadas utilizadas*/
 }
 
-* {
+* {                                     
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'TimesTen'; 
 }
 
-body{
+body{                                   /*Centralizando todos os elemntos dentro do body */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@ body{
 }
 
 .card{
-    position: relative;
+    position: relative;                 /*Controle de comprimento, largura, cores e arredondar o form */
     display: flex;
     width: 420px;
     height: 600px;
@@ -33,31 +33,31 @@ body{
     justify-content: center;
     align-items: center;
 }
-.title-icon img{
+.title-icon img{                        /*COntrole da imagem ao lado do título */
     position: relative;
     top: -20px;
     left: 160px  
 }
 
-.card .form{
-    width: 100%;
+.card .form{                            /*Controle do comprimento dos títulos */   
+    width: 100%;        
     padding: 65px;
     text-align: center;
 }
-.card .form h2{
+.card .form h2{                         /*Tamanho e local do título */
     position: relative;
     top: -85px;
     right: 20px;
     color: #162045;
 }
-.card .form h3{
+.card .form h3{                         /*Tamanho e local do título */
     position: relative;
     top: -75px;
     right: 20px;
     color: rgba(90,85,147,0.5)
 }
 
-.inputs{
+.inputs{                                /*Posição e barra preta no input */
     position: relative;
     width: 100%;
     height: 50px;
@@ -65,7 +65,7 @@ body{
     margin: 15px 0;  
 }
 
-.inputs label{
+.inputs label{                          /*Controle dos labels */
     position: absolute;
     top: -10px ; 
     font-size: 1em;
@@ -73,7 +73,7 @@ body{
     font-weight: 500;  
 }
 
-.inputs input{
+.inputs input{                          /*Aparência dos inputs */
     width: 100%;
     height: 100%;
     background: transparent;
@@ -81,7 +81,7 @@ body{
     outline: none;
     font-size: medium;
 }
-.rodape1{
+.rodape1{                               /*Controle do esqueci a senha e suporte */
     display: flex;
     justify-content: space-between;
     color: #232244;
@@ -89,7 +89,7 @@ body{
     margin: 70px 0 15px;
     text-decoration: none;
 }
-.rodape1 a{
+.rodape1 a{                             
     color:#232244;
     text-decoration: none;
 }
@@ -97,7 +97,7 @@ body{
     text-decoration: underline;
 }
 
-.btt{
+.btt{                               /* Apar6encia do botão */
    width: 100%;
    height: 45px;
    background: #5a5384;
@@ -107,7 +107,7 @@ body{
    font-size: 1em;
    color: white;
 }
-.rodape2{
+.rodape2{                       /* Aparência não possui conta e cadastre-se*/
     width: 100%;
     display: flex;
     justify-content: space-between;
